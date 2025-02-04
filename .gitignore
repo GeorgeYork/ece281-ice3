@@ -28,6 +28,9 @@
 # don't ignore markdown
 !*.md
 
+# don't ignore png files
+!*.png
+
 # don't ignore .github
 !.github/
 !.github/**/*
