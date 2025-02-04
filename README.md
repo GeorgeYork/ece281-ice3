@@ -7,7 +7,11 @@ This is a **template** repository.
 Targeted toward Digilent Basys3. Make sure to install the [board files](https://github.com/Xilinx/XilinxBoardStore/tree/2018.2/boards/Digilent/basys3).
 
 Tested on Vivado 2024.2
+![my simulated waveform](imagename.png)
 
+## Documentation
+
+My statement here.
 ---
 
 ## GitHub Actions Testbench

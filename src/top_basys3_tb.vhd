@@ -95,11 +95,17 @@ begin
 	       assert (w_sum = x"0" and w_Cout = '0') report "bad with zeros" severity failure;
        -- Test all ones input
        -- TODO
-	   
+	   w_sw <= x"FF"; w_Cin <= '1'; wait for 10 ns;
+           assert (w_sum = x"F" and w_Cout = '1') report "bad all ones" severity failure;	   
 	   -- A few other test cases
 	   -- TODO 	
-	
-		wait; -- wait forever
+	   w_sw <= x"00"; w_Cin <= '1'; wait for 10 ns;
+           assert (w_sum = x"1" and w_Cout = '0') report "bad 0 + 0 + 1" severity failure;    
+	   w_sw <= x"22"; w_Cin <= '1'; wait for 10 ns;
+               assert (w_sum = x"5" and w_Cout = '0') report "bad 2 + 2 + 1" severity failure;              
+ 	   w_sw <= x"2F"; w_Cin <= '0'; wait for 10 ns;
+               assert (w_sum = x"1" and w_Cout = '1') report "bad 2 minus 1" severity failure;          	
+	   assert true = false report "all tests worked" severity failure;
 	end process;	
 	-----------------------------------------------------	
 	
